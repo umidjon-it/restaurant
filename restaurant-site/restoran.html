@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шоро Ресторан | Чоро Ресторан</title>
+    <link rel="stylesheet" href="restoran.css">
+    <script src="restoran.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo" data-ru="ШОРО" data-kg="ЧОРО">ШОРО</div>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="kg">KG</button>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-ru="Главная" data-kg="Башкы">Главная</a></li>
+                <li><a href="#menu" data-ru="Меню" data-kg="Меню">Меню</a></li>
+                <li><a href="#about" data-ru="О нас" data-kg="Биз жөнүндө">О нас</a></li>
+                <li><a href="#contact" data-ru="Контакты" data-kg="Байланыш">Контакты</a></li>
+            </ul>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80');">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-ru="Вкус настоящей кухни" data-kg="Чыныгы тамактын даамы">Вкус настоящей кухни
+            </h1>
+            <p class="hero-subtitle" data-ru="Традиции и современность в каждом блюде"
+                data-kg="Ар бир тамакта салт жана азыркы заман">Традиции и современность в каждом блюде</p>
+            <a href="#menu" class="hero-btn" data-ru="Смотреть меню" data-kg="Менюну көрүү">Смотреть меню</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-ru="О ресторане" data-kg="Ресторан жөнүндө">О ресторане</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-ru="Ресторан 'Шоро' — это место, где традиционная кухня встречается с современными кулинарными техниками. Мы используем только свежие продукты и готовим с душой."
+                        data-kg="'Чоро' ресторану — салттуу тамак-аш азыркы кулинардык ыкмалар менен кездешкен жер. Биз жаңы гана продуктыларды колдонобуз жана жан дүйнөдөн даярдайбыз.">
+                        Ресторан 'Шоро' — это место, где традиционная кухня встречается с современными кулинарными
+                        техниками. Мы используем только свежие продукты и готовим с душой.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+                        alt="Restaurant Interior">
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3 data-ru="Быстрая подача" data-kg="Тез берүү">Быстрая подача</h3>
+                    <p data-ru="20-30 минут" data-kg="20-30 мүнөт">20-30 минут</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 data-ru="Свежие продукты" data-kg="Жаңы продуктылар">Свежие продукты</h3>
+                    <p data-ru="Ежедневная поставка" data-kg="Күн сайын жеткирүү">Ежедневная поставка</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3 data-ru="Опытные повара" data-kg="Тажрыйбалуу ашпоздор">Опытные повара</h3>
+                    <p data-ru="15+ лет опыта" data-kg="15+ жыл тажрыйба">15+ лет опыта</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 data-ru="Качество" data-kg="Сапат">Качество</h3>
+                    <p data-ru="Гарантия вкуса" data-kg="Даамдын кепилдиги">Гарантия вкуса</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title" data-ru="Наше меню" data-kg="Биздин меню">Наше меню</h2>
+
+            <!-- Menu Categories -->
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all" data-ru="Все" data-kg="Баары">Все</button>
+                <button class="category-btn" data-category="soups" data-ru="Супы" data-kg="Шорполор">Супы</button>
+                <button class="category-btn" data-category="main" data-ru="Основные" data-kg="Негизги">Основные</button>
+                <button class="category-btn" data-category="salads" data-ru="Салаты" data-kg="Салаттар">Салаты</button>
+                <button class="category-btn" data-category="drinks" data-ru="Напитки"
+                    data-kg="Суусундуктар">Напитки</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-grid">
+                <!-- Супы / Шорполор -->
+                <div class="menu-card" data-category="soups">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Лагман" data-kg="Лагман">Лагман</h3>
+                        <p class="menu-desc" data-ru="Традиционный суп с домашней лапшой"
+                            data-kg="Салттуу үй кесмеси менен шорпо">Традиционный суп с домашней лапшой</p>
+                        <div class="menu-footer">
+                            <span class="price">350 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="soups">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1588566565463-180a5b2090d2?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Шорпо" data-kg="Шорпо">Шорпо</h3>
+                        <p class="menu-desc" data-ru="Наваристый мясной бульон" data-kg="Этти жана ширелүү шорпо">
+                            Наваристый мясной бульон</p>
+                        <div class="menu-footer">
+                            <span class="price">280 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="soups">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1603073203482-495b7a9c0b0b?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Мастава" data-kg="Мастава">Мастава</h3>
+                        <p class="menu-desc" data-ru="Густой рисовый суп с мясом"
+                            data-kg="Эт менен калың күрүч шорпосу">Густой рисовый суп с мясом</p>
+                        <div class="menu-footer">
+                            <span class="price">320 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Основные / Негизги -->
+                <div class="menu-card" data-category="main">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1569058242252-92bd5f79cd67?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Плов" data-kg="Палоо">Плов</h3>
+                        <p class="menu-desc" data-ru="Классический узбекский плов с бараниной"
+                            data-kg="Классикалык өзбек палоосу кой эти менен">Классический узбекский плов с бараниной
+                        </p>
+                        <div class="menu-footer">
+                            <span class="price">450 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="main">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Манты" data-kg="Манты">Манты</h3>
+                        <p class="menu-desc" data-ru="Паровые манты с мясом и тыквой"
+                            data-kg="Буу менен бышкан эт жана ашкабак менен манты">Паровые манты с мясом и тыквой</p>
+                        <div class="menu-footer">
+                            <span class="price">380 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="main">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Шашлык" data-kg="Кебап">Шашлык</h3>
+                        <p class="menu-desc" data-ru="Сочный шашлык из баранины" data-kg="Кой этинен ширелүү кебап">
+                            Сочный шашлык из баранины</p>
+                        <div class="menu-footer">
+                            <span class="price">420 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="main">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Бешбармак" data-kg="Бешбармак">Бешбармак</h3>
+                        <p class="menu-desc" data-ru="Национальное блюдо с мясом и лапшой"
+                            data-kg="Эт жана кесме менен улуттук тамак">Национальное блюдо с мясом и лапшой</p>
+                        <div class="menu-footer">
+                            <span class="price">500 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Салаты / Салаттар -->
+                <div class="menu-card" data-category="salads">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Ачик-чучук" data-kg="Ачык-чучук">Ачик-чучук</h3>
+                        <p class="menu-desc" data-ru="Свежий салат с помидорами и луком"
+                            data-kg="Помидор жана пияз менен жаңы салат">Свежий салат с помидорами и луком</p>
+                        <div class="menu-footer">
+                            <span class="price">180 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="salads">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Овощной салат" data-kg="Жашылча салаты">Овощной салат</h3>
+                        <p class="menu-desc" data-ru="Сезонные овощи с зеленью"
+                            data-kg="Маалдуу жашылчалар жана көктүү">Сезонные овощи с зеленью</p>
+                        <div class="menu-footer">
+                            <span class="price">200 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Напитки / Суусундуктар -->
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Чай" data-kg="Чай">Чай</h3>
+                        <p class="menu-desc" data-ru="Зеленый или черный чай" data-kg="Жашыл же кара чай">Зеленый или
+                            черный чай</p>
+                        <div class="menu-footer">
+                            <span class="price">50 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Компот" data-kg="Компот">Компот</h3>
+                        <p class="menu-desc" data-ru="Домашний фруктовый компот" data-kg="Үйдө жасалган жемиш компоту">
+                            Домашний фруктовый компот</p>
+                        <div class="menu-footer">
+                            <span class="price">80 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1623428454614-abaf00244e52?w=600&q=80');">
+                    </div>
+                    <div class="menu-info">
+                        <h3 data-ru="Айран" data-kg="Айран">Айран</h3>
+                        <p class="menu-desc" data-ru="Традиционный кисломолочный напиток"
+                            data-kg="Салттуу кышкыл сүт суусундугу">Традиционный кисломолочный напиток</p>
+                        <div class="menu-footer">
+                            <span class="price">100 сом</span>
+                            <button class="order-btn" data-ru="Заказать" data-kg="Заказ кылуу">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-ru="Свяжитесь с нами" data-kg="Биз менен байланышыңыз">Свяжитесь с нами</h2>
+
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="orderForm" class="contact-form">
+                        <div class="form-group">
+                            <label data-ru="Ваше имя" data-kg="Атыңыз">Ваше имя</label>
+                            <input type="text" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-ru="Телефон" data-kg="Телефон">Телефон</label>
+                            <input type="tel" id="phone" placeholder="+996" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-ru="Что хотите заказать?" data-kg="Эмне заказ кылгыңыз келет?">Что хотите
+                                заказать?</label>
+                            <textarea id="message" rows="4" required></textarea>
+                        </div>
+
+                        <!-- Payment Method Selection -->
+                        <div class="form-group">
+                            <label data-ru="Способ оплаты" data-kg="Төлөө ыкмасы">Способ оплаты</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cash" checked>
+                                    <div class="payment-card">
+                                        <span class="payment-icon">💵</span>
+                                        <span data-ru="Наличные" data-kg="Накталай">Наличные</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="mbank">
+                                    <div class="payment-card mbank">
+                                        <span class="payment-icon">💳</span>
+                                        <span>M Bank</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="obank">
+                                    <div class="payment-card obank">
+                                        <span class="payment-icon">💳</span>
+                                        <span>O! Bank</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card">
+                                    <div class="payment-card card">
+                                        <span class="payment-icon">💳</span>
+                                        <span data-ru="Карта" data-kg="Карта">Карта</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" data-ru="Отправить заказ"
+                            data-kg="Заказды жөнөтүү">Отправить заказ</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3 data-ru="Телефон" data-kg="Телефон">Телефон</h3>
+                        <p>+996 555 123 456</p>
+                        <p>+996 777 987 654</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3 data-ru="Адрес" data-kg="Дарек">Адрес</h3>
+                        <p data-ru="г. Бишкек, ул. Чуй 123" data-kg="Бишкек шаары, Чүй көчөсү 123">г. Бишкек, ул. Чуй
+                            123</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h3 data-ru="Режим работы" data-kg="Иштөө убактысы">Режим работы</h3>
+                        <p data-ru="Ежедневно: 9:00 - 23:00" data-kg="Күн сайын: 9:00 - 23:00">Ежедневно: 9:00 - 23:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo" data-ru="ШОРО" data-kg="ЧОРО">ШОРО</h3>
+                    <p data-ru="Лучший ресторан национальной кухни" data-kg="Эң мыкты улуттук тамак-аш ресторану">Лучший
+                        ресторан национальной кухни</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ru="Контакты" data-kg="Байланыш">Контакты</h4>
+                    <p>+996 555 123 456</p>
+                    <p data-ru="г. Бишкек, ул. Чуй 123" data-kg="Бишкек шаары, Чүй көчөсү 123">г. Бишкек, ул. Чуй 123
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ru="Режим работы" data-kg="Иштөө убактысы">Режим работы</h4>
+                    <p data-ru="Понедельник - Воскресенье" data-kg="Дүйшөмбү - Жекшемби">Понедельник - Воскресенье</p>
+                    <p>9:00 - 23:00</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span data-ru="Ресторан Шоро. Все права защищены."
+                        data-kg="Чоро Ресторану. Бардык укуктар корголгон.">Ресторан Шоро. Все права защищены.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="restoran.js"></script>
+</body>
+
+</html>
