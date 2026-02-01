@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШОРО | Ресторан традиционной кухни</title>
+    <link rel="stylesheet" href="restoran2.css">
+    <script src="restoran.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">ШОРО</h1>
+                <nav class="nav" id="navLinks">
+                    <a href="#home" data-ru="Главная" data-kg="Башкы" data-en="Home">Главная</a>
+                    <a href="#menu" data-ru="Меню" data-kg="Меню" data-en="Menu">Меню</a>
+                    <a href="#branches" data-ru="Филиалы" data-kg="Филиалдар" data-en="Branches">Филиалы</a>
+                    <a href="#news" data-ru="Новости" data-kg="Жаңылыктар" data-en="News">Новости</a>
+                    <a href="restoran.html" data-ru="Вакансии" data-kg="Бош орундар" data-en="Vacancies">Вакансии</a>
+                    <a href="#about" data-ru="О нас" data-kg="Биз жөнүндө" data-en="About">О нас</a>
+                    <a href="#contact" data-ru="Контакты" data-kg="Байланыш" data-en="Contact">Контакты</a>
+                
+                    <div class="lang-toggle">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="kg">KG</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </nav>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero with Simple Slideshow -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow" id="heroSlideshow">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Slide Controls -->
+        <button class="slide-btn prev-btn" onclick="changeSlide(-1)">‹</button>
+        <button class="slide-btn next-btn" onclick="changeSlide(1)">›</button>
+        
+        <div class="slide-dots" id="slideDots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" data-ru="Традиционная кухня Средней Азии" data-kg="Орто Азиянын салттуу тамактары" data-en="Traditional Central Asian Cuisine">Традиционная кухня Средней Азии</h2>
+                <p class="hero-subtitle" data-ru="Аутентичные рецепты • Свежие продукты • 5 филиалов" data-kg="Түпнуска рецепттер • Жаңы продуктылар • 5 филиал" data-en="Authentic Recipes • Fresh Products • 5 Branches">Аутентичные рецепты • Свежие продукты • 5 филиалов</p>
+                <a href="#menu" class="hero-btn" data-ru="Посмотреть меню" data-kg="Менюну көрүү" data-en="View Menu">Посмотреть меню</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title" data-ru="Наше меню" data-kg="Биздин меню" data-en="Our Menu">Наше меню</h2>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all" data-ru="Все" data-kg="Баары" data-en="All">Все</button>
+                <button class="filter-btn" data-category="main" data-ru="Основные" data-kg="Негизги" data-en="Main">Основные</button>
+                <button class="filter-btn" data-category="soups" data-ru="Супы" data-kg="Шорполор" data-en="Soups">Супы</button>
+                <button class="filter-btn" data-category="salads" data-ru="Салаты" data-kg="Салаттар" data-en="Salads">Салаты</button>
+                <button class="filter-btn" data-category="drinks" data-ru="Напитки" data-kg="Суусундуктар" data-en="Drinks">Напитки</button>
+                <button class="filter-btn" data-category="desserts" data-ru="Десерты" data-kg="Десерттер" data-en="Desserts">Десерты</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Main dishes -->
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1569058242252-92bd5f79cd67?w=800&q=80" alt="Плов">
+                        <div class="dish-badge">Хит</div>
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Плов" data-kg="Палоо" data-en="Plov">Плов</h3>
+                        <p data-ru="Классический узбекский" data-kg="Классикалык өзбек" data-en="Classic Uzbek">Классический узбекский</p>
+                        <div class="dish-footer">
+                            <span class="price">450</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&q=80" alt="Манты">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Манты" data-kg="Манты" data-en="Manti">Манты</h3>
+                        <p data-ru="С мясом (6 шт)" data-kg="Эт менен (6)" data-en="With meat (6)">С мясом (6 шт)</p>
+                        <div class="dish-footer">
+                            <span class="price">380</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80" alt="Шашлык">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Шашлык" data-kg="Кебап" data-en="Kebab">Шашлык</h3>
+                        <p data-ru="Из баранины" data-kg="Кой этинен" data-en="Lamb">Из баранины</p>
+                        <div class="dish-footer">
+                            <span class="price">420</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=800&q=80" alt="Бешбармак">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Бешбармак" data-kg="Бешбармак" data-en="Beshbarmak">Бешбармак</h3>
+                        <p data-ru="С мясом" data-kg="Эт менен" data-en="With meat">С мясом</p>
+                        <div class="dish-footer">
+                            <span class="price">500</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80" alt="Орома">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Орома" data-kg="Орома" data-en="Oroma">Орома</h3>
+                        <p data-ru="Рулеты (4 шт)" data-kg="Түтүккүчтөр (4)" data-en="Rolls (4)">Рулеты (4 шт)</p>
+                        <div class="dish-footer">
+                            <span class="price">340</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1619221882647-e2e9c9174d37?w=800&q=80" alt="Куурдак">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Куурдак" data-kg="Куурдак" data-en="Kuurdak">Куурдак</h3>
+                        <p data-ru="С картофелем" data-kg="Картошка менен" data-en="With potatoes">С картофелем</p>
+                        <div class="dish-footer">
+                            <span class="price">390</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=800&q=80" alt="Самса">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Самса" data-kg="Самса" data-en="Samsa">Самса</h3>
+                        <p data-ru="С мясом (2 шт)" data-kg="Эт менен (2)" data-en="Meat (2)">С мясом (2 шт)</p>
+                        <div class="dish-footer">
+                            <span class="price">120</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="main">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80" alt="Димляма">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Димляма" data-kg="Дымлама" data-en="Dimlama">Димляма</h3>
+                        <p data-ru="Тушеное мясо" data-kg="Бышырылган эт" data-en="Stewed meat">Тушеное мясо</p>
+                        <div class="dish-footer">
+                            <span class="price">450</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soups -->
+                <div class="dish-card" data-category="soups">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80" alt="Лагман">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Лагман" data-kg="Лагман" data-en="Lagman">Лагман</h3>
+                        <p data-ru="С лапшой" data-kg="Кесме менен" data-en="With noodles">С лапшой</p>
+                        <div class="dish-footer">
+                            <span class="price">350</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="soups">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1588566565463-180a5b2090d2?w=800&q=80" alt="Шорпо">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Шорпо" data-kg="Шорпо" data-en="Shorpo">Шорпо</h3>
+                        <p data-ru="Мясной бульон" data-kg="Эт шорпосу" data-en="Meat broth">Мясной бульон</p>
+                        <div class="dish-footer">
+                            <span class="price">280</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="soups">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1603073203482-495b7a9c0b0b?w=800&q=80" alt="Мастава">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Мастава" data-kg="Мастава" data-en="Mastava">Мастава</h3>
+                        <p data-ru="Рисовый суп" data-kg="Күрүч шорпосу" data-en="Rice soup">Рисовый суп</p>
+                        <div class="dish-footer">
+                            <span class="price">320</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="soups">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=800&q=80" alt="Нарын">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Нарын" data-kg="Нарын" data-en="Naryn">Нарын</h3>
+                        <p data-ru="В бульоне" data-kg="Шорпо менен" data-en="In broth">В бульоне</p>
+                        <div class="dish-footer">
+                            <span class="price">420</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salads -->
+                <div class="dish-card" data-category="salads">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80" alt="Ачик-чучук">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Ачик-чучук" data-kg="Ачык-чучук" data-en="Achik-chuchuk">Ачик-чучук</h3>
+                        <p data-ru="Помидоры и лук" data-kg="Помидор, пияз" data-en="Tomato, onion">Помидоры и лук</p>
+                        <div class="dish-footer">
+                            <span class="price">180</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="salads">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80" alt="Овощной">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Овощной" data-kg="Жашылча" data-en="Vegetable">Овощной</h3>
+                        <p data-ru="Сезонные овощи" data-kg="Маалдуу" data-en="Seasonal">Сезонные овощи</p>
+                        <div class="dish-footer">
+                            <span class="price">200</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="dish-card" data-category="drinks">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80" alt="Чай">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Чай" data-kg="Чай" data-en="Tea">Чай</h3>
+                        <p data-ru="Зеленый/Черный" data-kg="Жашыл/Кара" data-en="Green/Black">Зеленый/Черный</p>
+                        <div class="dish-footer">
+                            <span class="price">80</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="drinks">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80" alt="Компот">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Компот" data-kg="Компот" data-en="Compote">Компот</h3>
+                        <p data-ru="Домашний" data-kg="Үйдөгү" data-en="Homemade">Домашний</p>
+                        <div class="dish-footer">
+                            <span class="price">120</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="drinks">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1623428454614-abaf00244e52?w=800&q=80" alt="Айран">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Айран" data-kg="Айран" data-en="Ayran">Айран</h3>
+                        <p data-ru="Традиционный" data-kg="Салттуу" data-en="Traditional">Традиционный</p>
+                        <div class="dish-footer">
+                            <span class="price">100</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="drinks">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800&q=80" alt="Максым">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Максым" data-kg="Максым" data-en="Maksym">Максым</h3>
+                        <p data-ru="Из злаков" data-kg="Эгиндерден" data-en="From grains">Из злаков</p>
+                        <div class="dish-footer">
+                            <span class="price">90</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="dish-card" data-category="desserts">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" alt="Чак-чак">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Чак-чак" data-kg="Чак-чак" data-en="Chak-chak">Чак-чак</h3>
+                        <p data-ru="С медом" data-kg="Бал менен" data-en="With honey">С медом</p>
+                        <div class="dish-footer">
+                            <span class="price">150</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="desserts">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=800&q=80" alt="Пахлава">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Пахлава" data-kg="Пахлава" data-en="Baklava">Пахлава</h3>
+                        <p data-ru="С орехами (4 шт)" data-kg="Жаңгак (4)" data-en="Nuts (4)">С орехами (4 шт)</p>
+                        <div class="dish-footer">
+                            <span class="price">200</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-category="desserts">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80" alt="Боорсок">
+                    </div>
+                    <div class="dish-info">
+                        <h3 data-ru="Боорсок" data-kg="Боорсок" data-en="Boorsok">Боорсок</h3>
+                        <p data-ru="10 штук" data-kg="10 даана" data-en="10 pcs">10 штук</p>
+                        <div class="dish-footer">
+                            <span class="price">100</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2 class="section-title" data-ru="Наши филиалы" data-kg="Биздин филиалдар" data-en="Our Branches">Наши филиалы</h2>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80');"></div>
+                    <div class="branch-info">
+                        <h3 data-ru="Центр" data-kg="Борбор" data-en="Center">Центр</h3>
+                        <p data-ru="ул. Чуй 123" data-kg="Чүй көчөсү 123" data-en="Chui St. 123">ул. Чуй 123</p>
+                        <p>📞 +996 555 123 456</p>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80');"></div>
+                    <div class="branch-info">
+                        <h3 data-ru="Ошский рынок" data-kg="Ош базар" data-en="Osh Bazaar">Ошский рынок</h3>
+                        <p data-ru="пр. Манаса 45" data-kg="Манас проспектиси 45" data-en="Manas Ave. 45">пр. Манаса 45</p>
+                        <p>📞 +996 555 123 457</p>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80');"></div>
+                    <div class="branch-info">
+                        <h3 data-ru="Асанбай" data-kg="Асанбай" data-en="Asanbai">Асанбай</h3>
+                        <p data-ru="ул. Ахунбаева 67" data-kg="Ахунбаев көчөсү 67" data-en="Akhunbaev St. 67">ул. Ахунбаева 67</p>
+                        <p>📞 +996 555 123 458</p>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80');"></div>
+                    <div class="branch-info">
+                        <h3 data-ru="Дордой" data-kg="Дордой" data-en="Dordoy">Дордой</h3>
+                        <p data-ru="ул. Ибраимова 103" data-kg="Ибраимов көчөсү 103" data-en="Ibraimov St. 103">ул. Ибраимова 103</p>
+                        <p>📞 +996 555 123 459</p>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="dish-badge new" data-ru="Новый" data-kg="Жаңы" data-en="New">Новый</div>
+                    <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80');"></div>
+                    <div class="branch-info">
+                        <h3 data-ru="Южные микрорайоны" data-kg="Түштүк райондор" data-en="South">Южные микрорайоны</h3>
+                        <p data-ru="ул. Жибек Жолу 234" data-kg="Жибек Жолу 234" data-en="Jibek Jolu 234">ул. Жибек Жолу 234</p>
+                        <p>📞 +996 555 123 460</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title" data-ru="Новости и акции" data-kg="Жаңылыктар жана акциялар" data-en="News and Promotions">Новости и акции</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80');"></div>
+                    <div class="news-content">
+                        <span class="news-date">25.01.2026</span>
+                        <h3 data-ru="Скидка 20% на плов!" data-kg="Палоого 20% арзандатуу!" data-en="20% off plov!">Скидка 20% на плов!</h3>
+                        <p data-ru="Каждую пятницу скидка 20% на все виды плова" data-kg="Ар бир жума күнү плов үчүн 20% арзандатуу" data-en="Every Friday 20% off all plov">Каждую пятницу скидка 20% на все виды плова</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80');"></div>
+                    <div class="news-content">
+                        <span class="news-date">20.01.2026</span>
+                        <h3 data-ru="Открылся новый филиал!" data-kg="Жаңы филиал ачылды!" data-en="New branch opened!">Открылся новый филиал!</h3>
+                        <p data-ru="Теперь мы на Жибек Жолу! Приходите на открытие" data-kg="Эми биз Жибек Жолудабыз! Ачылышка келиңиз" data-en="Now on Jibek Jolu! Come to opening">Теперь мы на Жибек Жолу! Приходите на открытие</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&q=80');"></div>
+                    <div class="news-content">
+                        <span class="news-date">15.01.2026</span>
+                        <h3 data-ru="Манты + чай = 450 сом" data-kg="Манты + чай = 450 сом" data-en="Manti + tea = 450 som">Манты + чай = 450 сом</h3>
+                        <p data-ru="Специальное предложение: манты с чаем по супер цене!" data-kg="Атайын сунуш: манты жана чай!" data-en="Special offer: manti with tea!">Специальное предложение: манты с чаем по супер цене!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vacancies -->
+  
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-ru="О нас" data-kg="Биз жөнүндө" data-en="About Us">О нас</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Restaurant">
+                </div>
+                <div class="about-text">
+                    <p data-ru="С 2010 года мы радуем наших гостей блюдами традиционной кухни народов Средней Азии. Наши повара используют только проверенные рецепты и свежие продукты." data-kg="2010-жылдан бери биз коноктордубузду Орто Азия элдеринин салттуу тамактары менен кубантып келебиз." data-en="Since 2010, we have been delighting our guests with traditional Central Asian cuisine.">С 2010 года мы радуем наших гостей блюдами традиционной кухни народов Средней Азии. Наши повара используют только проверенные рецепты и свежие продукты.</p>
+                    <p data-ru="Сегодня у нас работает 5 филиалов в разных районах Бишкека. Каждый из них сохраняет традиции гостеприимства и качества." data-kg="Азыр бизде Бишкектин ар кайсы райондорунда 5 филиал иштейт." data-en="Today we have 5 branches in different districts of Bishkek.">Сегодня у нас работает 5 филиалов в разных районах Бишкека. Каждый из них сохраняет традиции гостеприимства и качества.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-ru="Заказать доставку" data-kg="Жеткирүү заказ кылуу" data-en="Order Delivery">Заказать доставку</h2>
+            <p class="section-subtitle" data-ru="Доставка горячих блюд в течение 45 минут" data-kg="Ысык тамактарды 45 мүнөттө жеткирүү" data-en="Hot food delivery within 45 minutes">Доставка горячих блюд в течение 45 минут</p>
+            
+            <div class="order-container">
+                <div class="order-info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h3 data-ru="Быстро" data-kg="Тез" data-en="Fast">Быстро</h3>
+                        <p data-ru="45 минут" data-kg="45 мүнөт" data-en="45 min">45 минут</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔥</div>
+                        <h3 data-ru="Горячее" data-kg="Ысык" data-en="Hot">Горячее</h3>
+                        <p data-ru="Термосумки" data-kg="Термо" data-en="Thermal">Термосумки</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💳</div>
+                        <h3 data-ru="Удобно" data-kg="Ыңгайлуу" data-en="Easy">Удобно</h3>
+                        <p data-ru="4 способа" data-kg="4 жол" data-en="4 ways">4 способа</p>
+                    </div>
+                </div>
+
+                <form id="orderForm" class="order-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-ru="Имя *" data-kg="Аты *" data-en="Name *">Имя *</label>
+                            <input type="text" id="name" placeholder="Иван Иванов" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-ru="Телефон *" data-kg="Телефон *" data-en="Phone *">Телефон *</label>
+                            <input type="tel" id="phone" placeholder="+996 555 123 456" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-ru="Адрес *" data-kg="Дарек *" data-en="Address *">Адрес *</label>
+                        <input type="text" id="address" placeholder="ул. Чуй 123, кв. 45" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-ru="Комментарий" data-kg="Комментарий" data-en="Comment">Комментарий</label>
+                        <textarea id="comment" rows="2"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-ru="Оплата *" data-kg="Төлөө *" data-en="Payment *">Оплата *</label>
+                        <div class="payment-options">
+                            <label class="payment-card cash">
+                                <input type="radio" name="payment" value="cash" checked>
+                                <div class="payment-content">
+                                    <div class="payment-icon">💵</div>
+                                    <span data-ru="Наличные" data-kg="Накталай" data-en="Cash">Наличные</span>
+                                </div>
+                            </label>
+                            <label class="payment-card card-pay">
+                                <input type="radio" name="payment" value="card">
+                                <div class="payment-content">
+                                    <div class="payment-icon">💳</div>
+                                    <span data-ru="Карта" data-kg="Карта" data-en="Card">Карта</span>
+                                </div>
+                            </label>
+                            <label class="payment-card mbank">
+                                <input type="radio" name="payment" value="mbank">
+                                <div class="payment-content">
+                                    <div class="payment-icon">🏦</div>
+                                    <span>M Bank</span>
+                                </div>
+                            </label>
+                            <label class="payment-card obank">
+                                <input type="radio" name="payment" value="obank">
+                                <div class="payment-content">
+                                    <div class="payment-icon">🏦</div>
+                                    <span>O! Bank</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="order-total">
+                        <span data-ru="Итого:" data-kg="Жалпы:" data-en="Total:">Итого:</span>
+                        <span id="orderTotal">0 сом</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>🛒</span>
+                        <span data-ru="Оформить заказ" data-kg="Заказ кылуу" data-en="Place Order">Оформить заказ</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Badge -->
+    <button class="cart-badge" id="cartBadge">
+        <span>🛒</span>
+        <span class="cart-count">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-ru="Корзина" data-kg="Себет" data-en="Cart">Корзина</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart" data-ru="Корзина пуста" data-kg="Себет бош" data-en="Cart is empty">Корзина пуста</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-ru="Итого:" data-kg="Жалпы:" data-en="Total:">Итого:</span>
+                    <span class="total-price">0 сом</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" data-ru="Оформить" data-kg="Заказ" data-en="Checkout">Оформить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="paymentTitle" data-ru="Оплата" data-kg="Төлөө" data-en="Payment">Оплата</h2>
+                <button class="close-btn" id="closePayment">&times;</button>
+            </div>
+
+            <form id="paymentForm" class="payment-form">
+                <div class="form-group">
+                    <label data-ru="Номер карты" data-kg="Карта" data-en="Card">Номер карты</label>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ru="Срок" data-kg="Мөөнөт" data-en="Expiry">Срок</label>
+                        <input type="text" id="cardExpiry" placeholder="ММ/ГГ" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" id="cardCVV" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ru="Имя" data-kg="Аты" data-en="Name">Имя</label>
+                    <input type="text" id="cardName" required>
+                </div>
+
+                <button type="submit" class="pay-btn" data-ru="Оплатить" data-kg="Төлөө" data-en="Pay">Оплатить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✓</div>
+            <h2 data-ru="Заказ принят!" data-kg="Заказ кабыл алынды!" data-en="Order Accepted!">Заказ принят!</h2>
+            <p id="successMessage" data-ru="Доставка 45 минут" data-kg="45 мүнөттө" data-en="45 minutes">Доставка 45 минут</p>
+            <button class="close-success-btn" id="closeSuccess" data-ru="Закрыть" data-kg="Жабуу" data-en="Close">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Vacancy Modal -->
+    <div class="modal" id="vacancyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-ru="Отправить резюме" data-kg="Резюме жөнөтүү" data-en="Send Resume">Отправить резюме</h2>
+                <button class="close-btn" id="closeVacancy">&times;</button>
+            </div>
+
+            <form id="vacancyForm" class="payment-form">
+                <div class="form-group">
+                    <label data-ru="Ваше имя" data-kg="Атыңыз" data-en="Name">Ваше имя</label>
+                    <input type="text" id="vacancyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-ru="Телефон" data-kg="Телефон" data-en="Phone">Телефон</label>
+                    <input type="tel" id="vacancyPhone" placeholder="+996" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-ru="Опыт работы" data-kg="Тажрыйба" data-en="Experience">Опыт работы</label>
+                    <textarea id="vacancyExp" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="pay-btn" data-ru="Отправить" data-kg="Жөнөтүү" data-en="Send">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">ШОРО</h3>
+                    <p data-ru="Традиционная кухня с 2010" data-kg="2010-жылдан бери" data-en="Since 2010">Традиционная кухня с 2010</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/shoro.kg" target="_blank" class="social-link instagram">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/996555123456" target="_blank" class="social-link whatsapp">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@shoro" target="_blank" class="social-link youtube">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@shoro.kg" target="_blank" class="social-link tiktok">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/shoro.kg" target="_blank" class="social-link facebook">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-ru="Контакты" data-kg="Байланыш" data-en="Contact">Контакты</h4>
+                    <p>📞 +996 555 123 456</p>
+                    <p>📧 info@shoro.kg</p>
+                    <p data-ru="⏰ Ежедневно 9:00-23:00" data-kg="⏰ Күн сайын 9:00-23:00" data-en="⏰ Daily 9:00-23:00">⏰ Ежедневно 9:00-23:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ШОРО. <span data-ru="Все права защищены" data-kg="Бардык укуктар корголгон" data-en="All rights reserved">Все права защищены</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-final.js"></script>
+</body>
+</html>
